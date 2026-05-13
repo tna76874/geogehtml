@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geogehtml"
+version = "0.1.0"
+description = "Konvertiert GeoGebra GGB Dateien in eigenständige HTML Dateien"
+dependencies = [
+    "jinja2",
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+geogehtml = "geogehtml.main:main"
+
+[tool.setuptools.package-data]
+geogehtml = ["*.j2"]

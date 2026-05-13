@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8"/>
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+    <div id="ggbApplet"></div>
+
+    <script>
+    var parameters = {
+        "id": "ggbApplet",
+        "width": 1460,
+        "height": 841,
+        "showMenuBar": {{ settings.showMenuBar | tojson }},
+        "showAlgebraInput": {{ settings.showAlgebraInput | tojson }},
+        "showToolBar": {{ settings.showToolBar | tojson }},
+        "showToolBarHelp": true,
+        "showResetIcon": false,
+        "enableLabelDrags": false,
+        "enableShiftDragZoom": {{ settings.enableShiftDragZoom | tojson }},
+        "enableRightClick": {{ settings.enableRightClick | tojson }},
+        "errorDialogsActive": false,
+        "useBrowserForJS": false,
+        "allowStyleBar": false,
+        "preventFocus": false,
+        "showZoomButtons": {{ settings.showZoomButtons | tojson }},
+        "capturingThreshold": 3,
+        "appletOnLoad": function(api){ },
+        "showFullscreenButton": true,
+        "scale": 1,
+        "disableAutoScale": false,
+        "allowUpscale": false,
+        "clickToLoad": false,
+        "appName": "classic",
+        "buttonRounding": 0.7,
+        "buttonShadows": false,
+        "language": "de",
+        "ggbBase64": "{{ ggb_base64 }}"
+    };
+
+    var views = {'is3D': 1,'AV': 0,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
+    var applet = new GGBApplet(parameters, '5.0', views);
+    window.onload = function() { applet.inject('ggbApplet') };
+    </script>
+</body>
+</html>
