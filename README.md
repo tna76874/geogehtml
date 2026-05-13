@@ -7,7 +7,7 @@ A minimalist CLI tool to convert GeoGebra (`.ggb`) files into standalone HTML fi
 Install directly from GitHub via `pip`:
 
 ```bash
-pip install git+[https://github.com/tna76874/geogehtml.git](https://github.com/tna76874/geogehtml.git)
+pip install git+https://github.com/tna76874/geogehtml.git
 
 ```
 
